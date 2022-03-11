@@ -1,0 +1,28 @@
+{
+  "name": "AutoTik",
+  "description": "Scroll a Tiktok Profile to Increase View time",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["storage", "activeTab", "scripting"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.tiktok.com/@sincerestdon/video/*"],
+      "js": ["main.js"]
+    }
+  ],
+
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "/images/tiktok.png",
+      "32": "/images/tiktok (1).png",
+      "48": "/images/tiktok (2).png"
+    }
+  },
+  "icons": {
+    "48": "/images/tiktok (2).png"
+  }
+}
